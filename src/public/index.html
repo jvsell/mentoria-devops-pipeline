@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentoria DevOps</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="deploy-banner">
+    <span class="dot"></span>
+    Este site foi deployado automaticamente via <strong>GitHub Actions</strong> &rarr; GitHub Pages
+  </div>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        Mentoria DevOps
+      </div>
+      <nav>
+        <a href="#pipeline">Pipeline</a>
+        <a href="#trilha">Trilha</a>
+        <a href="#deploy">Deploy Info</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-text">
+        <p class="hero-tag">Aprenda na prática</p>
+        <h1>Do código ao <span class="highlight">deploy</span><br>com DevOps</h1>
+        <p class="hero-sub">
+          Uma mentoria focada em construir pipelines reais, entender infraestrutura como código
+          e dominar as ferramentas que o mercado usa no dia a dia.
+        </p>
+      </div>
+      <div class="hero-badge-group">
+        <span class="tech-badge">Git</span>
+        <span class="tech-badge">Docker</span>
+        <span class="tech-badge">GitHub Actions</span>
+        <span class="tech-badge">Terraform</span>
+        <span class="tech-badge">AWS</span>
+        <span class="tech-badge">Kubernetes</span>
+      </div>
+    </section>
+
+    <!-- Pipeline animation -->
+    <section class="section" id="pipeline">
+      <div class="container">
+        <h2 class="section-title">Como funciona uma pipeline CI/CD</h2>
+        <p class="section-sub">Cada push no repositório dispara esta sequência automaticamente.</p>
+
+        <div class="pipeline-track">
+          <div class="stage" id="stage-code">
+            <div class="stage-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <span class="stage-name">Code</span>
+            <span class="stage-status">git push</span>
+          </div>
+          <div class="arrow">&rsaquo;</div>
+          <div class="stage" id="stage-test">
+            <div class="stage-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <span class="stage-name">Test</span>
+            <span class="stage-status">npm test</span>
+          </div>
+          <div class="arrow">&rsaquo;</div>
+          <div class="stage" id="stage-build">
+            <div class="stage-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              </svg>
+            </div>
+            <span class="stage-name">Build</span>
+            <span class="stage-status">npm run build</span>
+          </div>
+          <div class="arrow">&rsaquo;</div>
+          <div class="stage" id="stage-deploy">
+            <div class="stage-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </div>
+            <span class="stage-name">Deploy</span>
+            <span class="stage-status">GitHub Pages</span>
+          </div>
+          <div class="arrow">&rsaquo;</div>
+          <div class="stage" id="stage-live">
+            <div class="stage-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <span class="stage-name">Live</span>
+            <span class="stage-status">em produção</span>
+          </div>
+        </div>
+
+        <p class="pipeline-caption" id="pipeline-caption">Animando pipeline...</p>
+      </div>
+    </section>
+
+    <!-- Trilha de aprendizado -->
+    <section class="section section-alt" id="trilha">
+      <div class="container">
+        <h2 class="section-title">Trilha de aprendizado</h2>
+        <p class="section-sub">Conteúdo progressivo do zero ao ambiente de produção.</p>
+
+        <div class="trilha-grid">
+          <div class="trilha-card">
+            <div class="trilha-num">01</div>
+            <h3>Fundamentos</h3>
+            <p>Linux, redes, Git e o terminal. A base que todo DevOps precisa dominar antes de qualquer ferramenta.</p>
+            <div class="trilha-tags">
+              <span>Linux</span><span>Git</span><span>Shell Script</span>
+            </div>
+          </div>
+          <div class="trilha-card">
+            <div class="trilha-num">02</div>
+            <h3>Containerização</h3>
+            <p>Empacote aplicações com Docker e orquestre ambientes com Docker Compose. Fim do "na minha máquina funciona".</p>
+            <div class="trilha-tags">
+              <span>Docker</span><span>Docker Compose</span><span>Registry</span>
+            </div>
+          </div>
+          <div class="trilha-card">
+            <div class="trilha-num">03</div>
+            <h3>CI/CD</h3>
+            <p>Automatize testes, builds e deploys. Aprenda a construir pipelines com GitHub Actions do zero.</p>
+            <div class="trilha-tags">
+              <span>GitHub Actions</span><span>Testes</span><span>Artefatos</span>
+            </div>
+          </div>
+          <div class="trilha-card">
+            <div class="trilha-num">04</div>
+            <h3>Cloud</h3>
+            <p>Provisione e gerencie infraestrutura na nuvem. Serviços gerenciados, IAM, redes e custos.</p>
+            <div class="trilha-tags">
+              <span>AWS</span><span>S3</span><span>EC2</span><span>RDS</span>
+            </div>
+          </div>
+          <div class="trilha-card">
+            <div class="trilha-num">05</div>
+            <h3>Infraestrutura como Código</h3>
+            <p>Gerencie toda a infraestrutura via código versionado. Reprodutível, auditável e automatizado.</p>
+            <div class="trilha-tags">
+              <span>Terraform</span><span>Ansible</span><span>HCL</span>
+            </div>
+          </div>
+          <div class="trilha-card">
+            <div class="trilha-num">06</div>
+            <h3>Observabilidade</h3>
+            <p>Se você não monitora, você não opera. Logs estruturados, métricas, traces e alertas inteligentes.</p>
+            <div class="trilha-tags">
+              <span>Prometheus</span><span>Grafana</span><span>Loki</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deploy info -->
+    <section class="section" id="deploy">
+      <div class="container">
+        <h2 class="section-title">Informações deste deploy</h2>
+        <p class="section-sub">Metadados injetados automaticamente pela pipeline no momento do build.</p>
+
+        <div class="info-card">
+          <table class="info-table">
+            <tbody>
+              <tr>
+                <td class="info-key">Status</td>
+                <td><span class="status-badge" id="info-status">carregando...</span></td>
+              </tr>
+              <tr>
+                <td class="info-key">Versão</td>
+                <td id="info-version">—</td>
+              </tr>
+              <tr>
+                <td class="info-key">Ambiente</td>
+                <td id="info-env">—</td>
+              </tr>
+              <tr>
+                <td class="info-key">Commit SHA</td>
+                <td id="info-commit">—</td>
+              </tr>
+              <tr>
+                <td class="info-key">Data do build</td>
+                <td id="info-date">—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>Mentoria DevOps &mdash; aprenda construindo</span>
+      <span>Deployado via <strong>GitHub Actions</strong></span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
